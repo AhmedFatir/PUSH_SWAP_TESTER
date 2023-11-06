@@ -6,7 +6,7 @@
 #    By: afatir <afatir@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/06 11:56:13 by afatir            #+#    #+#              #
-#    Updated: 2023/11/06 13:51:24 by afatir           ###   ########.fr        #
+#    Updated: 2023/11/06 14:34:12 by afatir           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -54,7 +54,7 @@ def test_push_swap(numbers):
     return operations, error_output
 
 def check_sort(numbers, operations):
-    checker_command = ['./checker_Mac'] + numbers
+    checker_command = ['./checker'] + numbers
     checker_input = '\n'.join(operations) + '\n'
     result = subprocess.run(checker_command, input=checker_input, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
     is_correct = result.stdout.strip() == 'OK'
