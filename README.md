@@ -34,14 +34,7 @@ python3 tester.py -h
 
 In this repository, I am using `checker_Mac` as a `checker`.
 If you are using a Linux environment, you should change `checker_Mac` to `checker_linux`,
-and then rename it to `checker`. You can find `checker_Mac` and `checker_linux` in the `utils` folder.
-steps:
+and then rename it to `checker`. You can find `checker_Mac` and `checker_linux` in the `utils` folder. ro you can just run:
 ```bash
-rm -f checker
-```
-```bash
-cd utils ; cp checker_linux ../
-```
-```bash
-cd .. ; mv checker_linux checker
+rm -f checker ; cd utils ; cp checker_linux ../ ; cd .. ; mv checker_linux checker
 ```
