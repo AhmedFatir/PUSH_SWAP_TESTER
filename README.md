@@ -10,18 +10,21 @@ If any of the tests fail, the script will create a `log.txt` file where you can 
 Before you run the tester, you need to have `Python 3` installed on your system.
 
 ## Setups
-
+1:
 ```bash 
-1. cd "PATH_TO_YOUR_PUSH_SWAP_REPOSITORY"
+cd "PATH_TO_YOUR_PUSH_SWAP_REPOSITORY"
 ```
+2:
 ```bash 
-2. git clone https://github.com/AhmedFatir/PUSH_SWAP_TESTER.git
+git clone https://github.com/AhmedFatir/PUSH_SWAP_TESTER.git
 ```
+3:
 ```bash 
-3. cd PUSH_SWAP_TESTER
+cd PUSH_SWAP_TESTER
 ```
+4:
 ```bash
-4. python3 tester.py "num_numbers" "num_tests" 
+python3 tester.py "num_numbers" "num_tests" 
 ```
 `example:`
 ```bash
