@@ -1,11 +1,13 @@
 # PUSH_SWAP_TESTER
 
 This testing script has been created to automate the testing of the `push_swap` project.
-It generates random number sequences, executes them through the `push_swap` program, and then verifies the results using the `checker_Mac` utility.
+It generates random number sequences, executes them through the `push_swap` program, and then verifies the results using the `checker` utility.
 The purpose of this script is to ensure that the sorting algorithm works as expected.
 If any of the tests fail, the script will create a `log.txt` file where you can find the generated numbers of the failed tests.
 
-if you are using a Linux environment you should change `checker_Mac` to `checker_linux` 
+In this repository, I am using `checker_Mac` as a checker.
+If you are using a Linux environment, you should change `checker_Mac` to `checker_linux`,
+and then rename it to `checker`.
 ## Prerequisites
 
 Before you run the tester, you need to have Python 3 installed on your system.
