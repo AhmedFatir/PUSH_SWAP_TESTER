@@ -6,7 +6,7 @@
 #    By: afatir <afatir@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/06 11:56:13 by afatir            #+#    #+#              #
-#    Updated: 2023/11/06 14:34:12 by afatir           ###   ########.fr        #
+#    Updated: 2023/11/06 16:01:10 by afatir           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -67,7 +67,8 @@ def assign_points(num_operations):
     if num_operations < 900: return 4
     if num_operations < 1100: return 3
     if num_operations < 1300: return 2
-    return 1
+    if num_operations < 1500: return 1
+    return 0
 
 def log_failed_sequence(numbers):
     with open('log.txt', 'a') as log_file:
@@ -92,20 +93,24 @@ def main():
         operations, push_swap_error = test_push_swap(numbers)
         if push_swap_error:
             log_failed_sequence(numbers)
-            print_color(f"{test_num}\tError\t\t{push_swap_error}", RED)
+            print_color(f"{test_num}\tpush_swap Error\t\t{push_swap_error}", RED)
             lowest_score = 0
             continue
 
         is_correct, num_operations, checker_error = check_sort(numbers, operations)
-        if checker_error or not is_correct:
+        if checker_error:
             log_failed_sequence(numbers)
-            print_color(f"{test_num}\tError\t\t{checker_error}", RED)
+            print_color(f"{test_num}\tchecker Error\t\t{checker_error}", RED)
             lowest_score = 0
             continue
-        
+
         points = assign_points(num_operations)
         lowest_score = min(lowest_score, points) if is_correct else 0
-        
+
+        if not is_correct:
+            points = 0
+            lowest_score = 0
+
         total_instructions += num_operations
         max_instructions = max(max_instructions, num_operations)
         min_instructions = min(min_instructions, num_operations)
