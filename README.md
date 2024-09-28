@@ -30,14 +30,4 @@ python3 tester.py "num_numbers" "num_tests"
 ```bash
 python3 tester.py 100 50
 ```
-`or just if you need help:`
-```bash
-python3 tester.py -h
-```
 
-In this repository, I am using `checker_Mac` as a `checker`.
-If you are using a Linux environment, you should change `checker_Mac` to `checker_linux`,
-and then rename it to `checker`. You can find `checker_Mac` and `checker_linux` in the `utils` folder. `or you can just run`:
-```bash
-rm -f checker ; cd utils ; cp checker_linux ../ ; cd .. ; mv checker_linux checker
-```
